@@ -204,6 +204,14 @@ header {
 
 .section-bloc {
   padding: 0em 15px 2rem;
+   &.restau-bloc > div{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+  }
+
   &.first-section {
     padding: 0;
   }
@@ -214,10 +222,12 @@ header {
 
   .card {
     position: relative;
+    max-width: 768px;
+    width: 100%;
     height: auto;
     background-color: #ffffff;
     box-shadow: 5px 5px 5px 1px #d2d2d2;
-    margin: 0 auto 35px;
+    //margin: 0 auto 35px;
     overflow: hidden;
     border-radius: 20px;
     font-family: "roboto";
@@ -446,6 +456,7 @@ hr {
 
     /*DIV TITRE LISTE ENTRÉES*/
     .list-section {
+      gap:15px;
       margin-top: 25px;
       overflow: hidden;
 
@@ -459,7 +470,7 @@ hr {
         align-items: center;
         max-width: 768px;
         width: 100%;
-        margin-bottom: 20px;
+        
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 0 1px 5px 0 rgb(0 0 0 / 16%);
@@ -477,31 +488,7 @@ hr {
           }
         }
 
-        .item-in-section {
-          -webkit-animation: item-in-section 0.5s ease-in both;
-                  animation: item-in-section 0.5s ease-in both;
-        }
-
-        @-webkit-keyframes item-in-section {
-          0% {
-            -webkit-transform: translateY(0);
-                    transform: translateY(0);
-          }
-          100% {
-            -webkit-transform: translateY(-100px);
-                    transform: translateY(-100px);
-          }
-        }
-        @keyframes item-in-section {
-          0% {
-            -webkit-transform: translateY(0);
-                    transform: translateY(0);
-          }
-          100% {
-            -webkit-transform: translateY(-100px);
-                    transform: translateY(-100px);
-          }
-        }
+        
 
 
         
@@ -552,6 +539,45 @@ hr {
             transform: rotate(0deg);
             transition: 0.3s all;
           }
+        }
+      }
+      
+      .item-in-section {
+        -webkit-animation: item-in-section 0.8s ease both;
+                animation: item-in-section 0.8s ease both;
+                &:nth-child(1){
+                  animation-delay:0;
+                }
+                &:nth-child(2){
+                  animation-delay:.1s;
+                }
+                &:nth-child(3){
+                  animation-delay:.2s;
+                }
+      }
+
+      @-webkit-keyframes item-in-section {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+                  opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+                  opacity: 1;
+        }
+      }
+      @keyframes item-in-section {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+                  opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+                  opacity: 1;
         }
       }
     }
