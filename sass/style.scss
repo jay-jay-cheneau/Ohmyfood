@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+
+
 // RESPONSIVE 768PX
 .media-querie {
   display: flex;
@@ -52,23 +54,23 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: fixed;
   background: #e8e8e8;
   inset: 0;
   height: 100vh;
   z-index: 100;
   opacity: 0.95;
-  -webkit-animation: disappear 3s forwards;
-          animation: disappear 3s forwards;
+  -webkit-animation: disappear 2s forwards;
+  animation: disappear 3s forwards;
   -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
 }
-//SPINNER 
+//SPINNER
 .loading-spinner {
   display: block;
   position: relative;
@@ -76,12 +78,13 @@
   height: 250px;
   border-radius: 50%;
   border: 7px solid transparent;
-  border-top-color: #9356DC;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  border-top-color: #9356dc;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
-.loading-spinner::before, .loading-spinner::after {
+.loading-spinner::before,
+.loading-spinner::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -93,9 +96,9 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border-top-color: #FF79DA;
-  -webkit-animation: spin 1.5s linear infinite;
-          animation: spin 1.5s linear infinite;
+  border-top-color: #ff79da;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 .loading-spinner::after {
@@ -103,37 +106,37 @@
   left: 25px;
   right: 25px;
   bottom: 25px;
-  border-top-color: #99E2D0;
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
+  border-top-color: #99e2d0;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 //L'ANIMATION
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes disappear {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   to {
     visibility: hidden;
@@ -143,14 +146,12 @@
 @keyframes disappear {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   to {
     visibility: hidden;
   }
 }
-
-
 
 /*GROS TITRE*/
 h2 {
@@ -181,7 +182,7 @@ header {
 .paris-belleville {
   width: 100%;
   height: 48px;
-  background-color: rgb(198, 198, 198);
+  background-color: rgb(244, 244, 244);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,12 +205,12 @@ header {
 
 .section-bloc {
   padding: 0em 15px 2rem;
-   &.restau-bloc > div{
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+  &.restau-bloc > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
   &.first-section {
@@ -217,12 +218,12 @@ header {
   }
   // odd / even
   &:nth-child(even) {
-    background-color: #e8e8e8;
+    background-color: #fafafa;
   }
 
   .card {
     position: relative;
-    max-width: 768px;
+    max-width: 100%;
     width: 100%;
     height: auto;
     background-color: #ffffff;
@@ -271,6 +272,7 @@ header {
     text-align: center;
   }
 
+  /*ICON RUBRIQUE FONCTIONNEMENT)*/
   .icon {
     height: 20px;
     display: flex;
@@ -331,6 +333,11 @@ header {
   &:hover {
     background-color: #e6daf5;
     cursor: pointer;
+    .icon {
+      path {
+        fill: #9356dc;
+      }
+    }
   }
 
   span {
@@ -456,7 +463,7 @@ hr {
 
     /*DIV TITRE LISTE ENTRÉES*/
     .list-section {
-      gap:15px;
+      gap: 15px;
       margin-top: 25px;
       overflow: hidden;
 
@@ -464,13 +471,13 @@ hr {
       display: flex;
       flex-wrap: wrap;
       .item-in-section {
+
         overflow: hidden;
         cursor: pointer;
         display: flex;
         align-items: center;
         max-width: 768px;
         width: 100%;
-        
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
         box-shadow: 0 1px 5px 0 rgb(0 0 0 / 16%);
@@ -486,16 +493,18 @@ hr {
             }
             width: 83px;
           }
+
+          span {
+            -webkit-animation: item-in-section 0.8s ease both;
+            animation: item-in-section 0.8s ease both;
+          }
         }
 
-        
-
-
-        
         div:first-child {
           /*Force la taille du premier div à prendre toute la place qu'il peu prendre */
           flex: 1;
           padding: 0 15px;
+          max-width: 100%;
         }
 
         /*TITRE ENTRÉES*/
@@ -509,20 +518,21 @@ hr {
           font-family: roboto;
           font-size: 17px;
           font-weight: lighter;
+          display: block;
         }
         /*PRIX ENTRÉES*/
         p {
-          justify-content: right;
+          justify-content: left;
           font-family: roboto;
           font-size: 18px;
           font-weight: bold;
         }
-        .span-p-display-flex {
+        .span-p-display-flex span {
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+          width: 100%;
         }
-
         .add-item {
           align-items: center;
           justify-content: center;
@@ -541,43 +551,51 @@ hr {
           }
         }
       }
-      
       .item-in-section {
-        -webkit-animation: item-in-section 0.8s ease both;
-                animation: item-in-section 0.8s ease both;
-                &:nth-child(1){
-                  animation-delay:0;
-                }
-                &:nth-child(2){
-                  animation-delay:.1s;
-                }
-                &:nth-child(3){
-                  animation-delay:.2s;
-                }
+        &:nth-child(1) {
+          animation-delay: 0;
+        }
+        &:nth-child(2) {
+          animation-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.2s;
+        }
       }
-
       @-webkit-keyframes item-in-section {
         0% {
-          -webkit-transform: translateY(50px);
-                  transform: translateY(50px);
-                  opacity: 0;
+          width: 100%;
+          
+            -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+            opacity: 0;
+        
         }
         100% {
-          -webkit-transform: translateY(0px);
-                  transform: translateY(0px);
-                  opacity: 1;
+          width: 350px;
+        
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+            opacity: 1;
+          
         }
       }
       @keyframes item-in-section {
         0% {
-          -webkit-transform: translateY(50px);
-                  transform: translateY(50px);
-                  opacity: 0;
+          width: 100%;
+          
+            -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+            opacity: 0;
+         
         }
         100% {
-          -webkit-transform: translateY(0px);
-                  transform: translateY(0px);
-                  opacity: 1;
+          width: 350px;
+          
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+            opacity: 1;
+         
         }
       }
     }
@@ -603,4 +621,14 @@ hr {
   display: block;
   padding: 20px 20px;
   margin: 60px auto 100px auto;
+}
+
+
+
+/*responsive*/
+@media (min-width: 768px) {
+  .container__index {
+    display: flex;
+    flex-direction: column;
+  }
 }
