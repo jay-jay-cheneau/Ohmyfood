@@ -203,10 +203,12 @@ header {
   font-family: "roboto";
 }
 .section-bloc .card .img-plats {
-  max-height: 100%;
+  height: 200px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 .section-bloc .card .bloc-badge {
   position: absolute;
@@ -422,7 +424,6 @@ hr {
 .starter .big-section .list-section {
   gap: 15px;
   margin-top: 25px;
-  overflow: hidden;
   /*RESPONSIVE*/
   display: flex;
   flex-wrap: wrap;
@@ -439,10 +440,43 @@ hr {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
   padding: 15px 0;
   position: relative;
-  transition: 0.5s all;
+  -webkit-animation: showItem 0.6s ease both;
+          animation: showItem 0.6s ease both;
   /*TITRE ENTRÉES*/
   /*ACCOMPAGNEMENT ENTRÉES*/
   /*PRIX ENTRÉES*/
+}
+.starter .big-section .list-section .item-in-section:nth-child(1) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.starter .big-section .list-section .item-in-section:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.starter .big-section .list-section .item-in-section:nth-child(3) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+@-webkit-keyframes showItem {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes showItem {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 .starter .big-section .list-section .item-in-section:hover {
   padding-right: 90px;
@@ -454,8 +488,8 @@ hr {
   transform: rotate(360deg);
 }
 .starter .big-section .list-section .item-in-section:hover span {
-  -webkit-animation: item-in-section 0.8s ease both;
-  animation: item-in-section 0.8s ease both;
+  -webkit-animation: item-in-section 0.5s ease both;
+  animation: item-in-section 0.5s ease both;
 }
 .starter .big-section .list-section .item-in-section div:first-child {
   /*Force la taille du premier div à prendre toute la place qu'il peu prendre */
@@ -503,40 +537,20 @@ hr {
   transform: rotate(0deg);
   transition: 0.3s all;
 }
-.starter .big-section .list-section .item-in-section:nth-child(1) {
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-}
-.starter .big-section .list-section .item-in-section:nth-child(2) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.starter .big-section .list-section .item-in-section:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
 @-webkit-keyframes item-in-section {
   0% {
-    width: 100%;
-    transform: translateY(50px);
-    opacity: 0;
+    width: 365px;
   }
   100% {
-    width: 350px;
-    transform: translateY(0px);
-    opacity: 1;
+    width: 200px;
   }
 }
 @keyframes item-in-section {
   0% {
-    width: 100%;
-    transform: translateY(50px);
-    opacity: 0;
+    width: 365px;
   }
   100% {
-    width: 350px;
-    transform: translateY(0px);
-    opacity: 1;
+    width: 200px;
   }
 }
 
