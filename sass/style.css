@@ -1,14 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
-.media-querie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (max-width: 768px) {
+  .media-querie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-
+@media screen and (min-width: 769px) {
+  .media-querie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .coeur {
   margin-top: 0;
   margin-right: 2px;
@@ -185,6 +196,11 @@ header {
   justify-content: center;
   gap: 20px;
 }
+@media screen and (max-width: 768px) {
+  .section-bloc.restau-bloc > div {
+    flex-direction: column;
+  }
+}
 .section-bloc.first-section {
   padding: 0;
 }
@@ -201,6 +217,16 @@ header {
   overflow: hidden;
   border-radius: 20px;
   font-family: "roboto";
+}
+@media screen and (min-width: 768px) {
+  .section-bloc .card {
+    max-width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-bloc .card {
+    max-width: calc(33% - 20px);
+  }
 }
 .section-bloc .card .img-plats {
   height: 200px;
@@ -380,8 +406,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 45px;
-  right: 45px;
+  top: 15px;
+  right: 15px;
 }
 
 .coeur {
@@ -391,8 +417,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 45px;
-  right: 45px;
+  top: 15px;
+  right: 15px;
 }
 
 /*BARRE VERTE*/
@@ -440,11 +466,22 @@ hr {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
   padding: 15px 0;
   position: relative;
+  /*ANIMATION DES ONGLETS PLATS*/
   -webkit-animation: showItem 0.6s ease both;
           animation: showItem 0.6s ease both;
   /*TITRE ENTRÉES*/
   /*ACCOMPAGNEMENT ENTRÉES*/
   /*PRIX ENTRÉES*/
+}
+@media screen and (min-width: 768px) {
+  .starter .big-section .list-section .item-in-section {
+    max-width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .starter .big-section .list-section .item-in-section {
+    max-width: calc(33% - 15px);
+  }
 }
 .starter .big-section .list-section .item-in-section:nth-child(1) {
   -webkit-animation-delay: 0.6s;

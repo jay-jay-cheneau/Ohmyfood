@@ -2,12 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 
 // RESPONSIVE 768PX
-.media-querie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (max-width: 768px) {
+  .media-querie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .media-querie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 // REMPLISSAGE DU COEUR
@@ -204,7 +217,11 @@ header {
 
 .section-bloc {
   padding: 0em 15px 2rem;
+
   &.restau-bloc > div {
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -221,6 +238,13 @@ header {
   }
 
   .card {
+    @media screen and (min-width: 768px) {
+      max-width: calc(50% - 20px);
+    }
+    @media screen and (min-width: 992px) {
+      max-width: calc(33% - 20px);
+    }
+
     position: relative;
     max-width: 100%;
     width: 100%;
@@ -420,8 +444,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 45px;
-  right: 45px;
+  top: 15px;
+  right: 15px;
 }
 
 .coeur {
@@ -431,8 +455,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 45px;
-  right: 45px;
+  top: 15px;
+  right: 15px;
 }
 
 /*BARRE VERTE*/
@@ -465,12 +489,19 @@ hr {
     .list-section {
       gap: 15px;
       margin-top: 25px;
-      
 
       /*RESPONSIVE*/
       display: flex;
       flex-wrap: wrap;
       .item-in-section {
+        @media screen and (min-width: 768px) {
+          max-width: calc(50% - 15px);
+        }
+
+        @media screen and (min-width: 992px) {
+          max-width: calc(33% - 15px);
+        }
+
         overflow: hidden;
         cursor: pointer;
         display: flex;
@@ -482,6 +513,8 @@ hr {
         box-shadow: 0 1px 5px 0 rgb(0 0 0 / 16%);
         padding: 15px 0;
         position: relative;
+
+        /*ANIMATION DES ONGLETS PLATS*/
         animation: showItem 0.6s ease both;
         &:nth-child(1) {
           animation-delay: 0.6s;
