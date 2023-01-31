@@ -77,8 +77,8 @@
   height: 100vh;
   z-index: 100;
   opacity: 0.95;
-  -webkit-animation: disappear 2s forwards;
-  animation: disappear 3s forwards;
+  -webkit-animation: disappear 1s forwards;
+  animation: disappear 1s forwards;
   -webkit-transform-origin: top;
   transform-origin: top;
 }
