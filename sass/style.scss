@@ -46,12 +46,16 @@
 
 .coeur .far {
   font-size: 30px;
-  color: #ffabc1;
   display: block;
-  background: -webkit-linear-gradient(#ffabc1, #356ad2);
+  background: black;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+ &:hover{
+  background: -webkit-linear-gradient(#ffabc1, #356ad2);
+  background-clip: text;
+  -webkit-background-clip: text;
+ }
 }
 
 * {
@@ -166,16 +170,11 @@
 }
 
 /*GROS TITRE*/
-h2 {
-  font-size: 22px;
+h1 {
+  font-size: 30px;
+  font-family: Shrikhand ;
 }
 
-/*LOGO HOMYFOOD*/
-img {
-  display: block;
-  margin-bottom: 5px;
-  max-width: 100%;
-}
 header {
   position: relative;
   z-index: 1000;
@@ -187,19 +186,22 @@ header {
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.16);
   background-color: white;
-  position: sticky;
   top: 0;
 }
 
 .paris-belleville {
   width: 100%;
   height: 48px;
-  background-color: rgb(244, 244, 244);
+  background-color:#EAEAEA;
   display: flex;
   align-items: center;
   justify-content: center;
   .icon {
     margin-right: 10px;
+  }
+  p{
+    font-family: roboto;
+    font-size: 16px;
   }
 }
 
@@ -211,20 +213,25 @@ header {
   text-align: center;
   font-family: "roboto";
   margin-top: 30px;
-  color: dimgray;
+  color: black;
   font-size: 1.2rem;
 }
 
 .section-bloc {
   padding: 0em 15px 2rem;
 
+  
+
   &.restau-bloc > div {
+    @media screen and (max-width: 1440px) {
+      flex-wrap: wrap;
+    }
     @media screen and (max-width: 768px) {
       flex-direction: column;
     }
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
   }
@@ -233,8 +240,8 @@ header {
     padding: 0;
   }
   // odd / even
-  &:nth-child(even) {
-    background-color: #fafafa;
+  &:nth-child(odd) {
+    background-color: #F7F7F7;
   }
 
   .card {
@@ -242,7 +249,8 @@ header {
       max-width: calc(50% - 20px);
     }
     @media screen and (min-width: 992px) {
-      max-width: calc(33% - 20px);
+      max-width: calc(25% - 20px);
+      font-size: 13px;
     }
 
     position: relative;
@@ -299,6 +307,7 @@ header {
   /*ICON RUBRIQUE FONCTIONNEMENT)*/
   .icon {
     height: 20px;
+    width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,10 +351,13 @@ header {
   font-family: "roboto";
   font-style: normal;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 0 30px;
+  gap: 20px;
   max-width: 325px;
-  width: 100%;
+  width: calc(100% - 12.5px);
+  margin-left: 12.5px;
   height: 70px;
   //margin: 15px;
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 16%);
@@ -378,9 +390,6 @@ header {
   }
 }
 
-.ticket .icon {
-  margin: 20px;
-}
 
 footer {
   padding: 20px;
@@ -403,11 +412,13 @@ footer {
 
 .icon-footer {
   display: flex;
+  gap: 20px;
   margin-top: 15px;
 
   span {
-    padding-left: 15px;
+    display: flex;
     font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -415,7 +426,11 @@ footer {
   margin-top: 20px;
   margin: 0 0 15px 0;
   img {
+    width: 20px;
     height: 20px;
+  }
+  h3{
+    font-family: Shrikhand;
   }
 }
 
@@ -501,7 +516,6 @@ hr {
         @media screen and (min-width: 992px) {
           max-width: calc(33% - 15px);
         }
-
         overflow: hidden;
         cursor: pointer;
         display: flex;
