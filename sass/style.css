@@ -7,6 +7,11 @@
   top: 10px;
   right: 10px;
 }
+.coeur.coeur-relative {
+  position: relative;
+  top: 0;
+  right: inherit;
+}
 .coeur .my-heart-empty,
 .coeur .my-heart-full {
   transition: all 1s;
@@ -376,7 +381,7 @@ footer a:hover {
 
 .menu-footer {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   padding: 15px 0;
 }
 .menu-footer img {

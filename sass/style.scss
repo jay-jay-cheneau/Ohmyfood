@@ -3,6 +3,11 @@
 
 //-----------------------------------------REMPLISSAGE DU COEUR-----------------------------------------
 .coeur {
+  &.coeur-relative{
+    position: relative;
+    top: 0;
+    right: inherit;
+  }
   transition: all 2s;
   position: absolute;
   top: 10px;
@@ -422,7 +427,7 @@ footer {
 .menu-footer {
   display: flex;
 
-  gap: 40px;
+  gap: 20px;
   padding: 15px 0;
   img {
     width: 20px;
