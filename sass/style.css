@@ -592,6 +592,11 @@ hr {
 }
 
 /*-----------------------------------------responsive-----------------------------------------*/
+@media (max-width: 375px) {
+  span {
+    font-size: 15px;
+  }
+}
 @media (min-width: 768px) {
   .container__index {
     display: flex;
