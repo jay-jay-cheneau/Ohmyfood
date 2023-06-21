@@ -3,7 +3,7 @@
 
 //-----------------------------------------REMPLISSAGE DU COEUR-----------------------------------------
 .coeur {
-  &.coeur-relative{
+  &.coeur-relative {
     position: relative;
     top: 0;
     right: inherit;
@@ -123,7 +123,7 @@
   animation: spin 1s linear infinite;
 }
 
-//-----------------------------------------L'ANIMATION-----------------------------------------
+//-----------------------------------------L'ANIMATION SPINNER-----------------------------------------
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -244,7 +244,7 @@ header {
   &.first-section {
     padding: 0;
   }
-  // odd / even
+
   &:nth-child(odd) {
     background-color: #f7f7f7;
   }
@@ -258,13 +258,18 @@ header {
       font-size: 13px;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     position: relative;
     max-width: 100%;
     width: 100%;
     height: auto;
     background-color: #ffffff;
     box-shadow: 5px 5px 5px 1px #d2d2d2;
-    //margin: 0 auto 35px;
+
     overflow: hidden;
     border-radius: 20px;
     font-family: "roboto";
@@ -670,15 +675,13 @@ hr {
   margin: 60px auto 100px auto;
 }
 
-/*-----------------------------------------responsive-----------------------------------------*/
+/*-----------------------------------------RESPONSIVE 375PX-----------------------------------------*/
 
 @media (max-width: 375px) {
-  span{
+  span {
     font-size: 15px;
   }
 }
-
-
 
 //-----------------------------------------RESPONSIVE 768PX-----------------------------------------
 @media (min-width: 768px) {

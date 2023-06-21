@@ -230,6 +230,10 @@ header {
     font-size: 13px;
   }
 }
+.section-bloc .card a {
+  text-decoration: none;
+  color: inherit;
+}
 .section-bloc .card .img-plats {
   height: 200px;
   width: 100%;
@@ -591,7 +595,7 @@ hr {
   margin: 60px auto 100px auto;
 }
 
-/*-----------------------------------------responsive-----------------------------------------*/
+/*-----------------------------------------RESPONSIVE 375PX-----------------------------------------*/
 @media (max-width: 375px) {
   span {
     font-size: 15px;
