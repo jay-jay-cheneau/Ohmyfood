@@ -459,10 +459,6 @@ footer {
   font-family: shrikhand;
   font-size: 30px;
   border-top: 100px;
-
-  .my-heart-empty,
-  .my-heart-full {
-  }
 }
 
 /*-----------------------------------------ICONE COEUR-----------------------------------------*/
@@ -658,6 +654,7 @@ hr {
 .span-p-display-flex {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 /*-----------------------------------------BOUTON COMMANDER-----------------------------------------*/
